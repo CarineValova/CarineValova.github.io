@@ -1,156 +1,83 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wordpress интенсив</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="css/font.css">
-    <link rel="stylesheet" href="css/style.css">
-    
-
+  <title>Итуруп</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script type="text/javascript" src="https://me.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=gC1UKPOzZcwg6b8BuKX7ceUf5F8WDEeotTcoeKbycCVl93McmXnBUMfofUzUGH2a0HQLUbe2yOWduWiyILLci_pw0KIOtSsIYZByD9u2e-6OyJlgAN03kzUQ63RBSpIP3O_3inpKNn_9CGaqc8yeYh4Xn-VzX2m3TgRBoSAF3N_nlGzU2bi3cct9AsYl9KdS7seKkT29HB3mdmz_MQoZgNXNjCfwxl7Or_-spRYcnGrSyH_5XavhHVUrC8_lh1MH45stqza2qxi10KMQRXTSoazChwal9zhuTa9iBlUbDq7USCmYZPGfpqqpJRck4Vca8jj6wZQNhfYvWNvgo3LcmH62lKshMb8lz_xtY96s9_3a4XVU0bInh87YHcD-zhhdsSl_3Rgoa4H-g8BtjhCeOW3j5-L6elMqBs1WxIculQKs9mVidnLgrM_p4WkJLRO4uf2Uujgz5K6oKobCy5SsBXNz30QRwIjU7k-pAlmumMn9aZI_PWhOsawW0eqIMP-B6fJVvxKEUaddhAVB2Bz7VSMcsdGPsqgZHQ0JgOekLz8mRj3lxLtRNNOl8AZO8DsGdCcovRkKWYoh_2on1ckciPo1WL0B5QtpRn0wBtk9As8-sg-dSYfAiCnuic51R3Di25UjuGrtFSnuLZTDdNUvtwHFNyouyKD9JlpmPr6UgB1XjAgnl7mq8kyueGuP-DOEcPzWRv18w4xHtRpnZe2ScwrldUbhLs9lFeDa1EoiNxX5BVqlDpNmTGF5AbF0JrgXPzm-kGtwhdvbWh1DX0xvorcJegSa64Lq4cwUhdMgkMyGpHJrjs8MnFAK4bI_YKVCVdwWG4o-GI5oYsK4GKxtcvyIXLHsmC17Z45klzphnUtq0BgKS6zMrO1ZZGimQNWYXJUe0bG7cYfSk0Lj15JFkIWeEYiriSBmY4rb61rE9ft-w8KZVBS8NtZLIpSnMNKHm1g2D7-JEucm2zBbFt7NPMKFdivRZWbOxt6JDK8fk4XPf66_XD8wvoh1I8Ft0YZR8052oRcINJuZ8G9hrdTpVZt8PZPO3XBLYwQ20zf7rvUTyrOMAFejxjHbc61s9q05jwLk3K5S0tsVVciAvdDHilNtRgjfB1LQIKUYma8hJnk03dR9Eo_4hh32HytCjokT_iR5zahtD2i6D8fN7SePUPk3xWqZJpcs0NLM3Kmcwjpayk4I8qbATS1Yyz5lHh-uEi41nGNaWxEMdg6LJsalASOSdCpeMzTC5dnq1omw8lKL0bdgZNqDF09MyWRF-B7uJD1xSc8-JnqfnMzMASKtj-PZSgluaPImucUYU_ksRL4nTs9DP8iA9ZTwWF7xg3Tp0u8t_Z4CJyyASUiMLvGAEQ" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://me.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9kb2MtMTAtOGctZG9jcy5nb29nbGV1c2VyY29udGVudC5jb20vZG9jcy9zZWN1cmVzYy9wYWxzZXZtdWI3Nm1tZW91cXU3dG5iNTUzZXQzMWxlby9wa3RvODdrZHBwNHBhcmVjM29sZWdybjZrYmM5MDdrbS8xNjYwOTgwODI1MDAwLzE2MjI2MTkyOTIxNTQ5NTQ4MDIyLzA1NzgxNTc4NDQ2MDQ1MjAzMjU3LzFIek9TQzhpaG5ieFVJTGs4ajBnc052eVNjcG1SalNzcT9lPWRvd25sb2FkJmF4PUFJOXZZbTVCNFZQcG9lWHhLWTJiTUFFR2VpWWFzRS14Rk5iWjV4bG1XUmE3NnZyc0o3Ty1mTjVtMTQxM1BBZ04zY01nNGxYU2xOMmtFVmUwRjkxRTJvZzFrdFZscHF6NDdyRmQydDdGbWFJcnRXVm9tU2ZpQmlNc2wyVzJWMDRUV1BuVlVCeFBic09YUXJTUUFhZHJZVzlPMVZyVVh4ME9OX2IxOXJmd3RNbVZ4cFliUTdKVnU2UnNmLURMaTIzVWtETkNLQmUyZ3paeS1UTGZIQ0tzalVndmRzMzFRSldZUVFtT09GR1EzR2FSeXpDaTVNZ2p4M2lUXzhZdzl2YVJYRVhhbTZmUGZuM3Q0Vy1BdU5BLU52TUViNFg4THhfR0puMktfZTQwbHBCYU9FcXZIa2FhYUFmR2ltVVhVa3JuNFAyVjlwZWRIb0dsbTRfNWtsOExMa0pUc3AxRW5ITjFsdEE3T2Uyay1HTjNRV0pZTHJqNnpYVUU5YVZSaE9ybWtKT21tSjRjZmtfOUh5ekhyM0VNSjE4Z0VBT0QzS2tHa2pPRTNleTY2NnhvSzZGS01LRGtueG9IWDdGSFo5MEcxVXFqcUk2VlFVMFZoR09vVDZzbWFSS1Z0MkZWc2Y1LWpTNVg4bUZwd2ZWdzdQc0U3V3JEaTN6eXRQMXFYMjFHQ2E4WEl5WHdxSFluU09ROHRsMERUYUpyemIyeERvQ2pWYXAzUTZLZVVlR3FpSEtadEYyWWRpZ0wtV0M4Vnh2ZVRObkpsM29icE80RXdSRmI4V0pYV2V3aHdKMjBiblQyY0FWX1YyY0djXzdDTWVIZ1hUb1ByYjZHei1qaTgxRW55YW9MM2VrVXM3ZjVHTTZFdDVHLWxnYjhyc0Q2b0hqdFpVZ0pwN3BhcVNMODhCbEttbjRsR2FXa1dtNGpGak9CRHlsUVBOVmtRcUFTb0xiUHFnJnV1aWQ9YmM4NDU2MzQtMjE4Ni00NDUxLWE4YWMtODkxNDgwY2IwYTE1JmF1dGh1c2VyPTA"/><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  
+  <style>
+* {
+          box-sizing: border-box;
+      }
+body {
+          margin: 0;
+          font-family: Arial;
+          font-size:16px;
+      }
+#myVideo {
+          position: fixed;
+          right: 0;
+          bottom:0;
+          min-width: 100%;
+          min-height: 100%;
+      }
+.content {
+          position:fixed;
+          bottom: 0;
+          background: rgba(0,0,0,0.1);
+          color: #f1f1f1;
+          width: 100%;
+          padding: 20px;
+      }
+#myBtn {
+          width: 200px;
+          font-size: 18px;
+          padding: 10px;
+          border: none;
+          background: #000;
+          color: #fff;
+          cursor: pointer;
+      }   
+#myBtn:hover {
+        background: #ddd;
+    color: black;
+      }   
+  </style> 
+ 
 </head>
 <body>
-    <section class="promo">
-        <div class="container">
-    <div class="logo">
-        <img src="../logo/logo.png" alt="logo" class="logo_img">
-        <div class="logo_txt">Wordpress интенсив</div>
-    </div>
-
-    <h1 class="title">Создать свой сайт на WordPress</h1>
-    <div class="simple">
-        <h2 class="title_big">Это просто!</h2>
-        <div class="line">
-
-        </div>
-    </div>
-    <h2 class="title">Куда сложнее сделать это правильно!</h2>
-    
-    <div class="promo_text">
-    Ежедневно в России появляется более 5 000 новых сайтов. <br> 
-    И только единицы из них становятся популярными и приносят ощутимую прибыль. В чем секрет? В чем формула успеха? Узнайте на предстоящем двухдневном <span>БЕСПЛАТНОМ</span>  интенсиве!
-    </div>
-    <button class="promo_btn">Записаться на интенсив!</button>
-    <div class="more">
-        <div class="more_text">Узнать больше об интенсиве</div>
-        <img src="icons/down.png" alt="down" class="more_img">
-
-    </div>
+  <video autoplay muted loop id="myVideo">
+    <source src="video/kuril.mp4" type="video/mp4"> 
+</video>
+<div class="content">
+    <h1>Приезжайте в гости на о. Итуруп!</h1>
+    <p>Звоните, и мы вам подберем личного экскурсовода, который проведет вас по необыкновенным местам. Путешествие запомнится на всю жизнь!</p>
+    <p><a style="color: rgb(249, 244, 244); font-size: 26px;" href="tel:+78003002525">тел: 8-800-300-25-25</a></p>
+    <button id="myBtn" onclick="myFunction()">Pause</button>
 </div>
-</section>
-
-<section class="waiting">
-    <div class="conteiner">
-        <h2 class="waiting_header">Что вас ждёт в нашем интенсиве?</h2>
-        <div class="waiting_divider"></div>
-        <div class="waiting_subheader">
-            2 бесплатных полноценных обучающих вебинара, где:
-        </div>
-        <div class="waiting_wrapper">
-            <div class="waiting_item">
-                <img src="img/waiting/waiting_1.png" alt="" class="waiting_img">
-                <div class="waiting_descr">Всего за два бесплатных вебинара мы научим вас,
-                    как создать свой сайт на WordPress. </div>
-            </div>
-            <div class="waiting_item">
-                <img src="img/waiting/waiting_2.png" alt="" class="waiting_img">
-                <div class="waiting_descr">Покажем, как правильно оптимизировать сайт и сделать его привлекательным для поисковых систем. Только свежая, профессиональная и актуальная информация!
-                    
-                </div>
-            </div>
-            <div class="waiting_item">
-                <img src="img/waiting/waiting_3.png" alt="" class="waiting_img">
-                <div class="waiting_descr">Вы узнаете, что такое «хорошая индексация»,«высокая посещаемость», «стабильный прирост посетителей», «ТОП по запросам» и, что намного важнее, как добиться всех этих показателей!</div>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="optimization">
-    <div class="container">
-        <h2 class="optimization_header">Что такое оптимизация и зачем она нужна?</h2>
-        <div class="optimization_text">
-            На просторах интернета несчетное количество действующих и даже заброшенных сайтов. Большинство из них совпадает не только по категориям, но и по содержанию. 
-            <br><br>
-            Представьте себе тысячи сайтов, на которых тем или иным образом предоставляется одна и та же информация или продается одна и та же услуга. И попасть на эти сайты можно лишь по тематическим запросам в поисковых системах.
-            <br><br> 
-            Но как вам быть, если ваш сайт похож на сотню или тысячу таких же, а на одной странице гугла или яндекса всего 10 позиций? Как привести посетителей страницы своего ресурса? Именно для этого и нужна оптимизация – для вывода вашего сайта на первую страницу поиска!
-            <br><br> 
-            <span>Мы научим вас, как сделать ваш сайт привлекательным для поисковых систем и посоветуем, как вывести его на первые страницы, обходя всех конкурентов.</span>
-        </div>
-        <img src="img/bg/woman_bg.png" alt="woman" class="optimization_img">
-
-    </div>
-</section>
-<section class="finish">
-    <div class="container">
-        <h2 class="finish_header">По окончании обучения Вы сможете!</h2>
-        <div class="finish_divider"></div>
-        <div class="finish_wrapper">
-            <div class="finish_item">
-                <div class="finish_round">
-                    <img src="img/finish/finish_icon_1.png" alt="1" class="finish_icon">
-                  </div>
-                <div class="finish_descr">Создать свой сайт или блог</div>
-            </div>
-            <div class="finish_item">
-                <div class="finish_round">
-                    <img src="img/finish/finish_icon_2.png" alt="2" class="finish_icon">
-                </div>
-                <div class="finish_descr">Правильно его оптимизировать</div>
-            </div>
-            <div class="finish_item">
-                <div class="finish_round">
-                    <img src="img/finish/finish_icon_3.png" alt="3" class="finish_icon">
-                 </div>
-                <div class="finish_descr">Обеспечить ему медлен-
-                    ный, но верный рост в 
-                    ТОП</div>
-            </div>
-            <div class="finish_item">
-                <div class="finish_round">
-                    <img src="img/finish/finish_icon_4.png" alt="4" class="finish_icon">
-                </div>
-                <div class="finish_descr">Достигнуть стабильного прироста посетителей</div>
-            </div>
-            <div class="finish_item">
-                <div class="finish_round">
-                    <img src="img/finish/finish_icon_5.png" alt="5" class="finish_icon">
-                 </div>
-                <div class="finish_descr">Получать ощутимую прибыль</div>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-<section class="sign">
-<div class="container">
-    <img src="icons/gift.png" alt="gift" class="gift_img">
-    <div class="sign_text">Для всех участников интенсива предусмотрены бонусы и подарки. Нажимайте на кнопку ниже, принимайте участие в вебинарах и забирайте свой приз по окончании обучения!
-    </div>
-    <button class="sign_btn">Записаться на интенсив!</button>
-</div>
-</section>
-<section class="group1">
-    <div class="container">
-        <img src="icons/group1.png" alt="group1" class="group1_img">
-        <h2 class="first">Первый вебинар состоится:</h2>
-        <h2 class="date">10 сентября в 20:00 по Москве</h2>
-        <h2 class="hurry">Успейте записаться, количество мест ограничено!</h2>
-        
-    </div>
-</section>
-<footer class="footer">
-    <div class="footer_text">
-        <a href="http://htmlbook.ru/example/knob.html" class="info"> Служба поддержки </a> | <a href="http://htmlbook.ru/example/knob.html" class="info"> Политика конфиденциальности</a> 
-        <br>Позвоните нам 8-800-555-01-21
-        
-    </div>
-</footer>
-
-
-    
+ 
+    <div class="jumbotron tex-center" style="margin-bottom:0;">
+    <p>Footer</p>
+  </div>
 </body>
+  <script>
+    var video = document.getElementById("myVideo");
+    var btn = document.getElementById("myBtn");
+        
+    function myFunction() {
+      if (video.paused) {
+        video.play();
+        btn.innerHTML = "Pause";
+      } else {
+        video.pause();
+        btn.innerHTML = "Play";
+      }
+    }
+        </script>
+
 </html>
